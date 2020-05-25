@@ -26,7 +26,7 @@ Take a moment now and setup your Cloud9 development environment.
 
 1. Go to https://myapps.microsoft.com/ in your web browser and authenticate using IHS Markit account.
 
-1. Click *AWS - OfficeoftheCTO Training NonProd* App and pick **AWS-OCTOTraining-Dev** role when prompted.
+1. Click **AWS - OfficeoftheCTO Training NonProd - 225748365585** app and pick **AWS-OCTOTraining-Trainee** role when prompted.
 
 1. Go to the AWS Management Console,**MAKE SURE YOU ARE IN US East(N. Virginia) us-east-1 REGION!!**. Change the region in upper right corner of AWS Management Console if needed.
 
@@ -42,7 +42,7 @@ Take a moment now and setup your Cloud9 development environment.
 1. Leave the defaults of launching a new
    **t2.micro** EC2 instance which will be paused after **30 minutes** of
    inactivity.
-   For **Network (VPC)** select **vpc-0ce4c2d536ee06c50** and for **Subnet** select **subnet-01f43da36b8bdb239 | Non-default in us-east-1a**.
+   For **Network (VPC)** select **vpc-069bd311e804e2b91** and for **Subnet** select **subnet-018f6efbe295d6c36 | Non-default in us-east-1e**.
 
 1. Click **Next step**.
 
@@ -52,32 +52,33 @@ Take a moment now and setup your Cloud9 development environment.
 1. Once ready, your IDE will open to a welcome screen. Below that, you should
    see a terminal prompt.
 
-    You can run AWS CLI commands in here just like you would on your local computer.
-    Verify that your user is logged in by running `aws sts get-caller-identity`.
+   You can run AWS CLI commands in here just like you would on your local computer.
+   Verify that your user is logged in by running `aws sts get-caller-identity`.
 
-    ```console
-    aws sts get-caller-identity
-    ```
+   ```console
+   aws sts get-caller-identity
+   ```
 
-    You'll see output indicating your account and user information:
+   You'll see output indicating your account and user information:
 
-    ```console
-    ec2-user:~/environment $ aws sts get-caller-identity
-    ```
-    ```json
-    {
-        "Account": "123456789012",
-        "UserId": "AKIAI44QH8DHBEXAMPLE",
-        "Arn": "arn:aws:iam::123456789012:user/Alice"
-    }
-    ```
+   ```console
+   ec2-user:~/environment $ aws sts get-caller-identity
+   ```
+
+   ```json
+   {
+     "Account": "123456789012",
+     "UserId": "AKIAI44QH8DHBEXAMPLE",
+     "Arn": "arn:aws:iam::123456789012:user/Alice"
+   }
+   ```
 
 Keep your AWS Cloud9 IDE opened in a tab throughout this workshop.
 
 ### :star: Tips
 
 :bulb: Keep an open scratch pad in Cloud9 or a text editor on your local computer
-for notes.  When the step-by-step directions tell you to note something such as
+for notes. When the step-by-step directions tell you to note something such as
 an ID or Amazon Resource Name (ARN), copy and paste that into the scratch pad.
 
 ### :star: Recap
