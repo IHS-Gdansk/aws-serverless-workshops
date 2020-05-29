@@ -4,48 +4,8 @@ This page provides instructions for cleaning up the resources created during the
 
 ## Resource Cleanup Instructions
 
-### 1. Module 6 - AppSync GraphQL API Cleanup
+### 1. Module 4 - REST API Cleanup
 
-<details>
-<summary><strong>:white_check_mark: Step-by-step directions(expand for details)</strong></summary><p>
-Delete the AppSync GraphQL API. From the AppSync console, select the application and click **Delete**
-
-1. Go to the [AWS AppSync Console][appsync-console].
-1. Select the API created for this workshop.
-1. Select **Delete** from the top right.
-1. Complete the application deletion process.
-
-</p></details>
-
-### 2. Module 5 - OAuth Cleanup
-
-<details>
-<summary><strong>:white_check_mark: Step-by-step directions(expand for details)</strong></summary><p>
-Delete the Unicorn Manager CloudFront distribution and S3 bucket for the static website hosting created in module 5. Using the Lambda console, also delete the **ListUnicornRides** and **ListUnicornAuthorizer** functions. If you have deployed the pre-requisites CloudFormation stack, delete the stack using the CloudFormation console.
-
-1. In the AWS Management Console, click **Services** then select **CloudFront** under Networking & Content Delivery.
-
-1. Select the distribution for the Unicorn Manager application we created in module 5 and click **Disable**.
-
-1. Once the distribution is disabled, click **Delete**.
-
-1. Using the **Services** dropdown, navigate to the **S3** console under Storage.
-
-1. Select the **unicornmanager-xxx** bucket and click **Delete bucket**. In the confirmation window enter the bucket name and click **Confirm**.
-
-1. Next, using the **Services** dropdown navigate to the **Lambda** console under Compute.
-
-1. From the functions list, select the **ListUnicornRides** function and use the **Actions** dropdown to select **Delete**.
-
-1. Repeat the same operation for the **ListUnicornAuthorizer** function.
-
-1. If you have deployed the pre-requisites stack before starting module 5, navigate to the **CloudFormation** console under Management Tools.
-
-1. Select the **WildRydes-xxx** stack and use the **Actions** dropdown to click **Delete Stack**.
-
-</p></details>
-
-### 3. Module 4 - REST API Cleanup
 Delete the REST API created in module 4. There is a **Delete API** option in the **Actions** drop-down when you select your API in the Amazon API Gateway Console.
 
 **:white_check_mark: Step-by-step directions**
@@ -55,7 +15,8 @@ Delete the REST API created in module 4. There is a **Delete API** option in the
 1. Expand the **Actions** drop-down and choose **Delete API**.
 1. Enter the name of your API when prompted and choose **Delete API**.
 
-### 4. Module 3 - Serverless Backend Cleanup
+### 2. Module 3 - Serverless Backend Cleanup
+
 Delete the AWS Lambda function, IAM role and Amazon DynamoDB table you created in module 3.
 
 **:white_check_mark: Step-by-step directions**
@@ -84,7 +45,8 @@ Delete the AWS Lambda function, IAM role and Amazon DynamoDB table you created i
 1. Choose **Delete table** from the **Actions** drop-down.
 1. Leave the checkbox to **Delete all CloudWatch alarms for this table** selected and choose **Delete**.
 
-### 5. Module 2 - User Management Cleanup
+### 3. Module 2 - User Management Cleanup
+
 Delete the Amazon Cognito User Pool
 
 **:white_check_mark: Step-by-step directions**
@@ -95,7 +57,8 @@ Delete the Amazon Cognito User Pool
 1. Choose **Delete Pool** in the upper right corner of the page.
 1. Complete the application deletion process.
 
-### 6. Module 1 - Web Application Cleanup
+### 4. Module 1 - Web Application Cleanup
+
 Delete the AWS Amplify Console application and optionally the AWS CodeCommit or GitHub repository created:
 
 **:white_check_mark: Step-by-step directions**
@@ -104,7 +67,7 @@ Delete the AWS Amplify Console application and optionally the AWS CodeCommit or 
 
 1. Launch the [Amplify Console console page][amplify-console-console].
 1. Select the application you launched today.
-1. From **Actions** in the top right corner, select *Delete App*
+1. From **Actions** in the top right corner, select _Delete App_
 1. Complete the application deletion process.
 
 #### For the CodeCommit repository:
@@ -114,8 +77,8 @@ Delete the AWS Amplify Console application and optionally the AWS CodeCommit or 
 1. Select **Delete repository** from the upper right of the page.
 1. Complete the repository deletion process.
 
+### 5. CloudWatch Logs Cleanup
 
-### 7. CloudWatch Logs Cleanup
 AWS Lambda automatically creates a new log group per function in Amazon CloudWatch Logs and writes logs to it when your function is invoked. You should delete the log group for the **RequestUnicorn** function.
 
 **:white_check_mark: Step-by-step directions**
@@ -127,16 +90,11 @@ AWS Lambda automatically creates a new log group per function in Amazon CloudWat
 1. Choose **Yes, Delete** when prompted to confirm.
 1. If you launched any CloudFormation templates to complete a module, repeat steps 3-5 for any log groups which begin with `/aws/lambda/wildrydes-webapp`.
 
-### 8. Cloud9 Cleanup
-Delete the Cloud9 Development environment created today. 
+### 6. Cloud9
 
-**:white_check_mark: Step-by-step directions**
+DO NOT REMOVE Cloud9 Development environment created for the exercise. The environment will be useful for Lab 2 of AWS Serverless Immersion Day.
 
-1. Launch the [Cloud9 console page][cloud9-console].
-1. Select the environment you launched today.
-1. From the top navigation, select **Delete**
-1. Complete the application deletion process.
-
+You can delete the Cloud9 Development environment after completing Lab 2.
 
 [amplify-console-console]: https://console.aws.amazon.com/amplify/home
 [amplify-console]: https://aws.amazon.com/amplify/console/
